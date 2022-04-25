@@ -8,6 +8,7 @@ public class DoktorEkrani extends JFrame {
     private static DoktorEkrani doktorEkrani = null;
     private DoktorAnaSayfa doktorAnaSayfa = null;
     private JLabel doktor;
+
     private JTextField tcTextField;
     private JButton girişYapButton;
     private JPasswordField şifreTextField;

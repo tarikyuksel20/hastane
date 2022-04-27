@@ -2,6 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 
 public class GirisEkrani extends JFrame {
     private JPanel mainPanel;
@@ -34,7 +35,11 @@ public class GirisEkrani extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                hastaEkrani = HastaEkrani.getInstance();
+                try {
+                    hastaEkrani = HastaEkrani.getInstance();
+                } catch (SQLException ex) {
+                    throw new RuntimeException(ex);
+                }
                 hastaEkrani.setVisible(true);
                 mainPanel.setVisible(false);
 
